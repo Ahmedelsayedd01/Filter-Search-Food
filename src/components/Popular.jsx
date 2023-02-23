@@ -35,16 +35,17 @@ function Popular() {
         >
           {popular.map((recipe) => {
             return (
-              <SplideSlide>
-                <div className="relative min-w-[25rem] overflow-hidden">
-                  <p className="absolute z-10 left-1/2 bottom-1/2 -translate-x-[20%] translate-y-0 text-white w-full">
+              <SplideSlide key={recipe.id}>
+                <div className="relative flex items-center justify-center min-w-[25rem] overflow-hidden">
+                  <p className="absolute bottom-5 z-10 text-white w-full text-center font-semibold	text-base h-2/5 flex justify-center items-center">
                     {recipe.title}
                   </p>
                   <img
                     src={recipe.image}
                     alt={recipe.title}
-                    className="absolute rounded-[2rem] w-full object-cover left-0"
+                    className="rounded-[2rem] w-full h-full object-cover left-0"
                   />
+                  <div className="absolute z-10 w-full h-full bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.5)] "></div>
                 </div>
               </SplideSlide>
             );
@@ -54,33 +55,5 @@ function Popular() {
     </div>
   );
 }
-
-// const Wrapper = styled.div`
-//   margin: 4rem 0rem;
-// `;
-// const Card = styled.div`
-//   min-width: 25rem;
-//   border-radius: 2rem;
-//   overflow: hidden;
-//   position: relative;
-
-//   img {
-//     border-radius: 2rem;
-//     position: absolute;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-//   p {
-//     position: absolute;
-//     z-index:10;
-//     left:50%;
-//     bottom:0%;
-//     transform: translate(-50%, 0%);
-//     color: white;
-//     width:100%;
-//   }
-// `;
 
 export default Popular;

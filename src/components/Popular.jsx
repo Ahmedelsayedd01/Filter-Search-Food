@@ -36,8 +36,8 @@ function Popular() {
           {popular.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
-                <div className="relative flex items-center justify-center min-w-[25rem] overflow-hidden">
-                  <p className="absolute bottom-5 z-10 text-white w-full text-center font-semibold	text-base h-2/5 flex justify-center items-center">
+                <div className="relative flex items-center justify-center rounded-[2rem] min-w-[25rem] overflow-hidden">
+                  <p className="absolute bottom-5 z-20 text-white w-full text-center font-semibold	text-base h-2/5 flex justify-center items-center">
                     {recipe.title}
                   </p>
                   <img
@@ -45,7 +45,7 @@ function Popular() {
                     alt={recipe.title}
                     className="rounded-[2rem] w-full h-full object-cover left-0"
                   />
-                  <div className="absolute z-10 w-full h-full bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.5)] "></div>
+                  <div className="absolute z-10 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0)] to-[rgba(0,0,0,0.5)] "></div>
                 </div>
               </SplideSlide>
             );

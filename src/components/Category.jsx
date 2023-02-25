@@ -1,11 +1,11 @@
-import { FaPixxaSlice, FaHamburger } from "react-icons/fa";
-import { GiNoodles, GiChopSticks } from "react-icons/gi";
+import { FaPizzaSlice, FaHamburger } from "react-icons/fa";
+import { GiNoodles, GiChopsticks } from "react-icons/gi";
 
 function Category() {
   return (
-    <div>
-      <div>
-        <FaPixxaSlice />
+    <div className="flex justify-center my-8 mx-0">
+      <div className="">
+        <FaPizzaSlice />
         <h4>Italian</h4>
       </div>
       <div>
@@ -17,7 +17,7 @@ function Category() {
         <h4>Thai</h4>
       </div>
       <div>
-        <GiChopSticks />
+        <GiChopsticks />
         <h4>Japanese</h4>
       </div>
     </div>

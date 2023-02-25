@@ -3,7 +3,7 @@ import { GiNoodles, GiChopsticks } from "react-icons/gi";
 
 function Category() {
   return (
-    <div className="flex justify-center my-8 mx-0">
+    <div className="flex justify-center my-2 mx-0">
       <div className="">
         <FaPizzaSlice />
         <h4>Italian</h4>

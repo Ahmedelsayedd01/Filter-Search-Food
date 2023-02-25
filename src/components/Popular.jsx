@@ -27,7 +27,7 @@ function Popular() {
 
   return (
     <div>
-      <div className="my-[4rem] mx-0">
+      <div className="my-[2rem] mx-0">
         <h3>Popular Picks</h3>
 
         <Splide
@@ -36,20 +36,20 @@ function Popular() {
             arrows: false,
             pagination: false,
             drag: "free",
-            gap: "5rem",
+            gap: "1rem",
           }}
         >
           {popular.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
-                <div className="relative flex items-center justify-center rounded-[2rem] min-w-[24rem] overflow-hidden">
+                <div className="relative flex items-center justify-center rounded-[2rem] min-h-[15rem] w-full overflow-hidden">
                   <p className="absolute bottom-5 z-20 text-white w-full text-center font-semibold	text-base h-2/5 flex justify-center items-center">
                     {recipe.title}
                   </p>
                   <img
                     src={recipe.image}
                     alt={recipe.title}
-                    className="rounded-[2rem] w-full h-full object-cover"
+                    className="absolute rounded-[2rem] w-full h-full object-cover left-0"
                   />
                   <div className="absolute z-10 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0)] to-[rgba(0,0,0,0.5)] "></div>
                 </div>

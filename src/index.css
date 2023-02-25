@@ -4,6 +4,15 @@
 
 @layer base {
   body {
-    @apply my-0 mx-[15%];
+    @apply my-0 mx-[20%];
+  }
+  h4 {
+    @apply text-base text-[rgb(56,56,56)];
+  }
+  h3 {
+    @apply text-2xl text-[rgb(56,56,56)] leading-10	my-2 mx-0;
+  }
+  a{
+    @apply text-[rgb(56,56,56)] 
   }
 }

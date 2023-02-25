@@ -25,7 +25,7 @@ function Veggie() {
   };
   return (
     <div>
-      <div className="m-t-[1rem] mx-0">
+      <div className="my-[1rem] mx-0">
         <h3>Our Vegetarian Picks</h3>
 
         <Splide

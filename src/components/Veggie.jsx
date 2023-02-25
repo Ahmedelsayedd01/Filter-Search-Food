@@ -25,7 +25,7 @@ function Veggie() {
   };
   return (
     <div>
-      <div className="my-[4rem] mx-0">
+      <div className="m-t-[1rem] mx-0">
         <h3>Our Vegetarian Picks</h3>
 
         <Splide
@@ -34,13 +34,13 @@ function Veggie() {
             arrows: false,
             pagination: false,
             drag: "free",
-            gap: "1rem",
+            gap: "2rem",
           }}
         >
           {veggie.map((recipe) => {
             return (
               <SplideSlide key={recipe.id}>
-                <div className="relative flex items-center justify-center rounded-[2rem] min-h-[15rem] w-full overflow-hidden">
+                <div className="relative flex items-center justify-center rounded-[2rem] min-h-[18rem] w-full overflow-hidden">
                   <p className="absolute bottom-5 z-20 text-white w-full text-center font-semibold	text-base h-2/5 flex justify-center items-center">
                     {recipe.title}
                   </p>

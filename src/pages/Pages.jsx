@@ -20,7 +20,7 @@ function Pages() {
       ),
     },
     {
-      path: "/cuisine",
+      path: "/cuisine/:type",
       element: <Cuisine />,
     },
   ]);

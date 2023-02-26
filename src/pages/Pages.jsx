@@ -21,7 +21,12 @@ function Pages() {
     },
     {
       path: "/cuisine/:type",
-      element: <Cuisine />,
+      element: (
+        <>
+          <Category />
+          <Cuisine />
+        </>
+      ),
     },
   ]);
 

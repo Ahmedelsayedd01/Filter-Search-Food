@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function Category() {
   return (
     <div className="flex justify-center my-2 mx-0">
-      <NavLink to={"/cuisine/Italian"} className="flex flex-col justify-center items-center rounded-[50%] mr-8">
+      <NavLink to={"/cuisine/Italian"} className="flex flex-col justify-center items-center rounded-[50%] mr-8 text-d">
         <FaPizzaSlice />
         <h4>Italian</h4>
       </NavLink>

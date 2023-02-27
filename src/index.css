@@ -15,4 +15,7 @@
   a{
     @apply text-[rgb(56,56,56)] 
   }
+  .gradient{
+    @apply bg-gradient-to-r from-[#f27121] to-[#e94057] 
+  }
 }

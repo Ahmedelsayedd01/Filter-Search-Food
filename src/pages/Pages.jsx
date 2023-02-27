@@ -3,12 +3,14 @@ import Home from "./Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cuisine from "./Cuisine";
 import Category from "../components/Category";
+import Search from "../components/Search";
 function Pages() {
   const route = createBrowserRouter([
     {
       path: "/",
       element: (
         <>
+          <Search />
           <Category />
           <Home />
         </>
@@ -18,6 +20,7 @@ function Pages() {
       path: "/cuisine/:type",
       element: (
         <>
+          <Search />
           <Category />
           <Cuisine />
         </>

@@ -22,7 +22,7 @@ function Cuisine() {
     <div className="grid grid-cols-4 gap-5">
       {cuisine.map((item) => {
         return (
-          <div className="" key={item.id}>
+          <div key={item.id}>
             <img src={item.image} alt="" className="w-full rounded-[2rem]" />
             <h4 className="text-center p-2">{item.title}</h4>
           </div>

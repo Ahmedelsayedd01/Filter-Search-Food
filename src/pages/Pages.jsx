@@ -30,12 +30,12 @@ function Pages() {
       // errorElement: <ErrorBoundary />,
     },
     {
-      path: "/search/:search",
+      path: "/searched/:search",
       element: (
         <>
           <Search />
           <Category />
-          {/* <Cuisine /> */}
+          <Cuisine />
           <Searched />
         </>
       ),

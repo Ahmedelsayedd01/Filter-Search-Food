@@ -3,7 +3,9 @@ import Home from "./Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cuisine from "./Cuisine";
 import Category from "../components/Category";
+// import ErrorBoundary from "../components/ErrorBoundary";
 import Search from "../components/Search";
+import Searched from "./Searched";
 function Pages() {
   const route = createBrowserRouter([
     {
@@ -23,6 +25,18 @@ function Pages() {
           <Search />
           <Category />
           <Cuisine />
+        </>
+      ),
+      // errorElement: <ErrorBoundary />,
+    },
+    {
+      path: "/search/:search",
+      element: (
+        <>
+          <Search />
+          <Category />
+          {/* <Cuisine /> */}
+          <Searched />
         </>
       ),
     },

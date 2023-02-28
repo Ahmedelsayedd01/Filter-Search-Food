@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Link } from "react-router-dom";
 
 function Popular() {
   const [popular, setPopular] = useState([]);
@@ -43,14 +44,16 @@ function Popular() {
             return (
               <SplideSlide key={recipe.id}>
                 <div className="relative flex items-center justify-center rounded-[2rem] min-h-[18rem] w-full overflow-hidden">
-                  <p className="absolute bottom-5 z-20 text-white w-full text-center font-semibold	text-base h-2/5 flex justify-center items-center">
-                    {recipe.title}
-                  </p>
-                  <img
-                    src={recipe.image}
-                    alt={recipe.title}
-                    className="absolute rounded-[2rem] w-full h-full object-cover left-0"
-                  />
+                  <Link to={"/recipe/" + recipe.id}>
+                    <p className="absolute bottom-5 z-20 text-white w-full text-center font-semibold	text-base h-2/5 flex justify-center items-center">
+                      {recipe.title}
+                    </p>
+                    <img
+                      src={recipe.image}
+                      alt={recipe.title}
+                      className="absolute rounded-[2rem] w-full h-full object-cover left-0"
+                    />
+                  </Link>
                   <div className="absolute z-10 w-full h-full bg-gradient-to-b from-[rgba(0,0,0,0)] to-[rgba(0,0,0,0.5)] "></div>
                 </div>
               </SplideSlide>

@@ -16,7 +16,6 @@ function Search() {
         }}
         value={input}
       />
-      <h1>{input}</h1>
     </form>
   );
 }

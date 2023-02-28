@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 function Search() {
   const [input, setInput] = useState("");
+  const navigate = useNavigate();
+
   const submitHandler = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
+    navigate("/searched/" + input);
+    console.log("hello");
   };
   return (
-    <form className="relative w-full mb-2" onSubmit={submitHandler()}>
+    <form className="relative w-full mb-2" onSubmit={submitHandler}>
       <FaSearch className="absolute top-2/4 left-0 transform translate-y-[-50%] translate-x-[100%] text-white cursor-pointer" />
       <input
         type="text"

@@ -8,7 +8,6 @@ function Search() {
   const submitHandler = (e) => {
     e.preventDefault();
     navigate("/searched/" + input);
-    console.log("hello");
   };
   return (
     <form className="relative w-full mb-2" onSubmit={submitHandler}>

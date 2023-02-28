@@ -6,6 +6,7 @@ import Category from "../components/Category";
 // import ErrorBoundary from "../components/ErrorBoundary";
 import Search from "../components/Search";
 import Searched from "./Searched";
+import Recipe from "./Recipe";
 function Pages() {
   const route = createBrowserRouter([
     {
@@ -37,6 +38,18 @@ function Pages() {
           <Category />
           <Cuisine />
           <Searched />
+        </>
+      ),
+    },
+    {
+      path: "/recipe/:name",
+      element: (
+        <>
+          <Search />
+          <Category />
+          <Cuisine />
+          {/* <Searched /> */}
+          <Recipe />
         </>
       ),
     },

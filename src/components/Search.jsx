@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 function Search() {
   const [input, setInput] = useState("");
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
   return (
-    <form className="relative w-full mb-2">
+    <form className="relative w-full mb-2" onSubmit={submitHandler()}>
       <FaSearch className="absolute top-2/4 left-0 transform translate-y-[-50%] translate-x-[100%] text-white cursor-pointer" />
       <input
         type="text"

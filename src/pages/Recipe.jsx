@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 function Recipe() {
   let params = useParams();
   const [details, setDetails] = useState({});
+  const [activeTab, setActiveTab] = useState("instructions");
 
   const fetchDetails = async () => {
     const data = await fetch(
@@ -15,7 +16,22 @@ function Recipe() {
   useEffect(() => {
     fetchDetails();
   }, [params.name]);
-  return <div>{details.title}</div>;
+  return (
+    <div className="flex  mt-[10rem] mb-[5rem] ">
+      <div className="">
+        <h2 className="mb-8">{details.title}</h2>
+        <img src={details.image} alt="" className="" />
+      </div>
+      <div className="mr-40">
+        <button className="btn">
+          Instructions
+        </button>
+        <button className="btn">
+          Ingredients
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default Recipe;

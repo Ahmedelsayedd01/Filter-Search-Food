@@ -12,10 +12,16 @@
   h3 {
     @apply text-2xl text-[rgb(56,56,56)] leading-10	my-2 mx-0;
   }
-  a{
-    @apply text-[rgb(56,56,56)] 
+  a {
+    @apply text-[rgb(56,56,56)];
   }
-  .gradient{
-    @apply bg-gradient-to-r from-[#f27121] to-[#e94057] 
+  .gradient {
+    @apply bg-gradient-to-r from-[#f27121] to-[#e94057];
+  }
+  button {
+    @apply py-2 px-8 text-[#313131] bg-white border-[2px] border-black mr-8 font-semibold;
+  }
+  .active {
+    @apply bg-gradient-to-tr from-[#494949] to-[#313131] text-white;
   }
 }

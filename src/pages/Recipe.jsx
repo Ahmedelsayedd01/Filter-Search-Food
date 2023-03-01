@@ -22,11 +22,21 @@ function Recipe() {
         <h2 className="mb-8">{details.title}</h2>
         <img src={details.image} alt="" className="" />
       </div>
-      <div className="mr-40">
-        <button className="btn">
+      <div className="mr-40 flex">
+        <button
+          className={activeTab === "instructions" ? "active" : ""}
+          onClick={() => {
+            setActiveTab("instructions");
+          }}
+        >
           Instructions
         </button>
-        <button className="btn">
+        <button
+          className={activeTab === "ingredients" ? "active" : ""}
+          onClick={() => {
+            setActiveTab("ingredients");
+          }}
+        >
           Ingredients
         </button>
       </div>

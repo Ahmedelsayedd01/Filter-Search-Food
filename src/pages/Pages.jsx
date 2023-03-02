@@ -47,7 +47,7 @@ function Pages() {
         <>
           <Search />
           <Category />
-          <Cuisine />
+          {/* <Cuisine /> */}
           {/* <Searched /> */}
           <Recipe />
         </>

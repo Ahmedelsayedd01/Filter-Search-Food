@@ -21,10 +21,10 @@ function Recipe() {
       <div className="w-2/4 bg-slate-500">
         <h3 className="mb-6">{/* {details.title} */}asdasdsadsad</h3>
         <h3 className="mb-6">{/* {details.title} */}asdasdsadsad</h3>
-        <img src={details.image} alt="" className="" />
+        <img src={details.image} alt="" />
       </div>
       <div className="bg-red-500 w-2/4">
-        <div className="flex w-full">
+        <div className="flex">
           <button
             className={activeTab === "instructions" ? "active" : ""}
             onClick={() => {

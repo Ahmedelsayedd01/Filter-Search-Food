@@ -17,12 +17,12 @@ function Recipe() {
     fetchDetails();
   }, [params.name]);
   return (
-    <div className="flex my-20">
+    <div className="my-20 flex justify-center bg-red-500">
       <div className="">
         <h3 className="mb-6">{details.title}</h3>
         <img src={details.image} alt="" className="" />
       </div>
-      <div className="ml-[10rem] my-4">
+      <div className=" my-4">
         <button
           className={activeTab === "instructions" ? "active" : ""}
           onClick={() => {

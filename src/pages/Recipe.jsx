@@ -17,30 +17,33 @@ function Recipe() {
     fetchDetails();
   }, [params.name]);
   return (
-    <div className="my-20 flex justify-center bg-red-500">
-      <div className="">
-        <h3 className="mb-6">{details.title}</h3>
+    <div className="my-20 flex gap-10">
+      <div className="w-2/4 bg-slate-500">
+        <h3 className="mb-6">{/* {details.title} */}asdasdsadsad</h3>
+        <h3 className="mb-6">{/* {details.title} */}asdasdsadsad</h3>
         <img src={details.image} alt="" className="" />
       </div>
-      <div className=" my-4">
-        <button
-          className={activeTab === "instructions" ? "active" : ""}
-          onClick={() => {
-            setActiveTab("instructions");
-          }}
-        >
-          Instructions
-        </button>
-        <button
-          className={activeTab === "ingredients" ? "active" : ""}
-          onClick={() => {
-            setActiveTab("ingredients");
-          }}
-        >
-          Ingredients
-        </button>
+      <div className="bg-red-500 w-2/4">
+        <div className="flex w-full">
+          <button
+            className={activeTab === "instructions" ? "active" : ""}
+            onClick={() => {
+              setActiveTab("instructions");
+            }}
+          >
+            Instructions
+          </button>
+          <button
+            className={activeTab === "ingredients" ? "active" : ""}
+            onClick={() => {
+              setActiveTab("ingredients");
+            }}
+          >
+            Ingredients
+          </button>
+        </div>
         <div className="">
-        <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
+          <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
         </div>
       </div>
     </div>

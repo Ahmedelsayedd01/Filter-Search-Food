@@ -18,12 +18,12 @@ function Recipe() {
   }, [params.name]);
   return (
     <div className="my-20 flex gap-10">
-      <div className="w-2/4 bg-slate-500">
+      <div className="w-2/4">
         <h3 className="mb-6">{details.title}</h3>
         <img src={details.image} alt="" />
       </div>
-      <div className="bg-red-500 w-2/4">
-        <div className="flex">
+      <div className="w-2/4">
+        <div className="flex mb-6">
           <button
             className={activeTab === "instructions" ? "active" : ""}
             onClick={() => {

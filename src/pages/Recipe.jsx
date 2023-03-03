@@ -45,8 +45,8 @@ function Recipe() {
         </div>
         {activeTab === "instructions" && (
           <div className="">
-            <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
-            <p dangerouslySetInnerHTML={{ __html: details.instructions }} className="mt-6"></p>
+            <p dangerouslySetInnerHTML={{ __html: details.summary }} className="text-xl"></p>
+            <p dangerouslySetInnerHTML={{ __html: details.instructions }} className="font-normal mt-6"></p>
           </div>
         )}
 

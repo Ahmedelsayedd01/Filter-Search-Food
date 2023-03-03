@@ -23,7 +23,24 @@ function Recipe() {
         <img src={details.image} alt="" />
       </div>
       <div className="bg-red-500 w-2/4">
-        
+        <div className="flex">
+          <button
+            className={activeTab === "instructions" ? "active" : ""}
+            onClick={() => {
+              setActiveTab("instructions");
+            }}
+          >
+            Instructions
+          </button>
+          <button
+            className={activeTab === "ingredients" ? "active" : ""}
+            onClick={() => {
+              setActiveTab("ingredients");
+            }}
+          >
+            Ingredients
+          </button>
+        </div>
         <div className="">
           <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
         </div>

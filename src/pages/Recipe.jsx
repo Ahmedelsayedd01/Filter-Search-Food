@@ -12,6 +12,7 @@ function Recipe() {
     );
     const detailData = await data.json();
     setDetails(detailData);
+    console.log(detailData);
   };
   useEffect(() => {
     fetchDetails();
@@ -46,7 +47,9 @@ function Recipe() {
           <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
         </div>
         <ul>
-          
+          {details.extendedIngredients.map((ingredient) => (
+            <li key={ingredient.id}>{ingredient.original}</li>
+          ))}
         </ul>
       </div>
     </div>

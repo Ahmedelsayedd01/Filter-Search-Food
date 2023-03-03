@@ -45,15 +45,15 @@ function Recipe() {
         </div>
         {activeTab === "instructions" && (
           <div className="">
-            <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-            <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+            <p dangerouslySetInnerHTML={{ __html: details.summary }}></p>
+            <p dangerouslySetInnerHTML={{ __html: details.instructions }} className="mt-6"></p>
           </div>
         )}
 
         {activeTab === "ingredients" && (
           <ul>
             {details.extendedIngredients.map((ingredient) => (
-              <li className="text-xl" key={ingredient.id}>{ingredient.original}</li>
+              <li className="text-xl list-disc ml-6" key={ingredient.id}>{ingredient.original}</li>
             ))}
           </ul>
         )}

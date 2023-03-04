@@ -22,7 +22,7 @@ function Cuisine() {
       {cuisine.map((item) => {
         return (
           <div key={item.id}>
-            <Link to={}>
+            <Link to={"/recipe/" + item.id}>
               <img src={item.image} alt="" className="w-full rounded-[2rem]" />
               <h4 className="text-center p-2">{item.title}</h4>
             </Link>

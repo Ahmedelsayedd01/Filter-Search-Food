@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link, useParams } from "react-router-dom";
 function Cuisine() {
   const [cuisine, setCuisine] = useState([]);
@@ -18,7 +18,13 @@ function Cuisine() {
   }, [params.type]);
 
   return (
-    <div className="grid grid-cols-4 gap-5">
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="grid grid-cols-4 gap-5"
+    >
       {cuisine.map((item) => {
         return (
           <div key={item.id}>
@@ -29,7 +35,7 @@ function Cuisine() {
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
 

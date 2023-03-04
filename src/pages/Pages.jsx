@@ -1,13 +1,15 @@
 import React from "react";
 import Home from "./Home";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cuisine from "./Cuisine";
-import Category from "../components/Category";
-// import ErrorBoundary from "../components/ErrorBoundary";
-import Search from "../components/Search";
-import Searched from "./Searched";
-import Recipe from "./Recipe";
 import Nav from "../components/Nav";
+import Search from "../components/Search";
+import Category from "../components/Category";
+import Recipe from "./Recipe";
+import Searched from "./Searched";
+
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 function Pages() {
   const route = createBrowserRouter([
     {
@@ -55,11 +57,12 @@ function Pages() {
       ),
     },
   ]);
+  // const location = useLocation();
 
   return (
-    <div>
+    <AnimatePresence mode="wait">
       <RouterProvider router={route} />
-    </div>
+    </AnimatePresence>
   );
 }
 

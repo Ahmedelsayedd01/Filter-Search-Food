@@ -19,10 +19,10 @@ function Cuisine() {
 
   return (
     <motion.div
-      animate={{ opacity: 1 }}
+      animate={{ opacity: 2 }}
       initial={{ opacity: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 5000 }}
+      transition={{ duration: .5 }}
       className="grid grid-cols-4 gap-5"
     >
       {cuisine.map((item) => {

@@ -36,7 +36,6 @@ function Pages() {
         <>
           <Search />
           <Category />
-          <Cuisine />
           <Searched />
         </>
       ),

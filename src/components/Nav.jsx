@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { GiKnifeFork } from "react-icons/gi";
 function Nav() {
   return (
-    <nav>
+    <nav className="flex items-center my-8">
       <GiKnifeFork />
-      <Link to={"/"}>deliciousss</Link>
+      <Link to={"/"} className="font-normal text-2xl font-[cursive]">deliciousss</Link>
     </nav>
   );
 }

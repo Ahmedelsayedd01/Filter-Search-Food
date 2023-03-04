@@ -28,7 +28,6 @@ function Pages() {
           <Cuisine />
         </>
       ),
-      // errorElement: <ErrorBoundary />,
     },
     {
       path: "/searched/:search",

@@ -25,6 +25,7 @@ function Pages() {
       path: "/cuisine/:type",
       element: (
         <>
+          <Nav />
           <Search />
           <Category />
           <Cuisine />
@@ -35,6 +36,7 @@ function Pages() {
       path: "/searched/:search",
       element: (
         <>
+          <Nav />
           <Search />
           <Category />
           <Searched />
@@ -45,6 +47,7 @@ function Pages() {
       path: "/recipe/:name",
       element: (
         <>
+          <Nav />
           <Search />
           <Category />
           <Recipe />

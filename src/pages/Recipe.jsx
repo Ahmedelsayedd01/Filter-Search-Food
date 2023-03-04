@@ -13,7 +13,6 @@ function Recipe() {
     const detailData = await data.json();
     setDetails(detailData);
     console.log(detailData);
-    console.log(details.extendedIngredients);
   };
   useEffect(() => {
     fetchDetails();
@@ -45,15 +44,23 @@ function Recipe() {
         </div>
         {activeTab === "instructions" && (
           <div className="">
-            <p dangerouslySetInnerHTML={{ __html: details.summary }} className="text-xl"></p>
-            <p dangerouslySetInnerHTML={{ __html: details.instructions }} className="font-normal mt-6"></p>
+            <p
+              dangerouslySetInnerHTML={{ __html: details.summary }}
+              className="text-lg font-medium"
+            ></p>
+            <p
+              dangerouslySetInnerHTML={{ __html: details.instructions }}
+              className="font-normal mt-6"
+            ></p>
           </div>
         )}
 
         {activeTab === "ingredients" && (
           <ul>
             {details.extendedIngredients.map((ingredient) => (
-              <li className="text-xl list-disc ml-6" key={ingredient.id}>{ingredient.original}</li>
+              <li className="text-xl list-disc ml-6" key={ingredient.id}>
+                {ingredient.original}
+              </li>
             ))}
           </ul>
         )}

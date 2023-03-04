@@ -7,12 +7,14 @@ import Category from "../components/Category";
 import Search from "../components/Search";
 import Searched from "./Searched";
 import Recipe from "./Recipe";
+import Nav from "../components/Nav";
 function Pages() {
   const route = createBrowserRouter([
     {
       path: "/",
       element: (
         <>
+          <Nav />
           <Search />
           <Category />
           <Home />

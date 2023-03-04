@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import { motion } from "framer-motion";
-import { /* Link, */ useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 function Cuisine() {
   const [cuisine, setCuisine] = useState([]);
   let params = useParams();
@@ -22,8 +22,10 @@ function Cuisine() {
       {cuisine.map((item) => {
         return (
           <div key={item.id}>
-            <img src={item.image} alt="" className="w-full rounded-[2rem]" />
-            <h4 className="text-center p-2">{item.title}</h4>
+            <Link to={}>
+              <img src={item.image} alt="" className="w-full rounded-[2rem]" />
+              <h4 className="text-center p-2">{item.title}</h4>
+            </Link>
           </div>
         );
       })}

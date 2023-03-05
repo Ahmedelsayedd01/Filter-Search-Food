@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Recipe() {
   let params = useParams();
@@ -12,13 +13,18 @@ function Recipe() {
     );
     const detailData = await data.json();
     setDetails(detailData);
-    console.log(detailData);
   };
   useEffect(() => {
     fetchDetails();
   }, [params.name]);
   return (
-    <div className="my-20 flex gap-10">
+    <motion.div
+      animate={{ opacity: 2 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="my-20 flex gap-10"
+    >
       <div className="w-2/4">
         <h3 className="mb-6">{details.title}</h3>
         <img src={details.image} alt="" />
@@ -59,13 +65,13 @@ function Recipe() {
           <ul>
             {details.extendedIngredients.map((ingredient) => (
               <li className="text-xl list-disc ml-6" key={ingredient.id}>
-                {ingredient.original}
+                <p>{ingredient.original}</p>
               </li>
             ))}
           </ul>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

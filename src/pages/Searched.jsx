@@ -31,5 +31,4 @@ function Searched() {
     </div>
   );
 }
-
 export default Searched;

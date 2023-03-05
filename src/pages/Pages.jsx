@@ -9,7 +9,6 @@ import Searched from "./Searched";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { useLocation } from "react-router-dom";
 function Pages() {
   const route = createBrowserRouter([
     {
@@ -57,8 +56,6 @@ function Pages() {
       ),
     },
   ]);
-  // const location = useLocation();
-
   return (
     <AnimatePresence mode="wait">
       <RouterProvider router={route} />

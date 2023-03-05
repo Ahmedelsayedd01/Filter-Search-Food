@@ -62,5 +62,4 @@ function Veggie() {
     </div>
   );
 }
-
 export default Veggie;
